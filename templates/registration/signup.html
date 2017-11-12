@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block navbar_content %}
+              <li><a style="color: #eee;" href="/login">Login</a></li>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="card card-container">
+            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+            <h1>SignUp!</h1>
+            <form class="form-signin" method="POST">
+                {% csrf_token %}
+                <span id="reauth-email" class="reauth-email"></span>
+                <input type="text" id="inputUser" class="form-control field" name="username" placeholder="Username" required autofocus>
+                <input type="email" id="inputEmail" class="form-control" name="email" placeholder="Email address" required autofocus>
+                <input type="password" id="inputPassword" class="form-control" name="password1" placeholder="Password" required>
+                <input type="password" id="inputPassword2" class="form-control field" name="password2" placeholder="Confirm Password" required>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" value="SignUp" type="submit">Sign Up</button>
+                {% if form.errors %}
+                    <p style="color: red;">
+                    {% for message in form.error_messages %}
+
+                         {{ message }}
+
+                    {% endfor %}
+                    </p>
+                {% endif %}
+            </form><!-- /form -->
+        </div><!-- /card-container -->
+    </div> <!-- /container -->
+{% endblock %}

@@ -1,0 +1,69 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CodeZilla</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+      <link href="/static/js/bootstrap.min.js" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/signin.css" rel="stylesheet">
+  </head>
+  <!-- NAVBAR
+================================================== -->
+  <body>
+    <div class="navbar-wrapper" >
+        <nav class="navbar navbar-inverse navbar-fixed-top" style="color: #eee";>
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" style="color: #eee"; class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/" style="color: #eee;">CodeZilla</a>
+    </div>
+          <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right">
+                  {% block navbar_content %}
+                  {% endblock %}
+              </ul>
+          </div> <!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    </div>
+     <!-- /container -->
+    {% block content %}
+
+
+
+
+
+
+
+
+
+    {% endblock %}
+
+    <footer class="container-fluid navbar-fixed-bottom navbar navbar-inverse" style="color: #eee";>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2017 Roopak Chugh &middot; Tarun Goel</p>
+      </footer>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    {% block additional_scripts %}
+    {% endblock %}
+  </body>
+</html>
